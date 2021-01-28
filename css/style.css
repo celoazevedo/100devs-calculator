@@ -1,0 +1,74 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Clear fix hack */
+/* .clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+} */
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(218, 243, 245);
+}
+
+.calculator-grid > button {
+  font-size: 3rem;
+  border: 1px solid black;
+  background-color: rgb(243, 240, 235);
+  border-radius: 50%;
+}
+
+.output {
+  margin-bottom: 5px;
+  /* so the output box fills the entire space */
+  grid-column: 1 / -1;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.output .current-operand {
+  color: black;
+  font-size: 3rem;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.calculator-grid {
+  background-color: black;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px);
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.calculator-grid > button:hover {
+  background-color: rgb(124, 135, 136);
+}
