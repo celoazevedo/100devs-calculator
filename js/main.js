@@ -7,11 +7,11 @@ the clear key */
 
 //call the smurfs to listen to the key presses
 
-// document.querySelector("#calculate").addEventListener("click", result);
-// document.querySelector("#multiply").addEventListener("click", multiplication);
-// document.querySelector("#divide").addEventListener("click", division);
-// document.querySelector("#add").addEventListener("click", addition);
-// document.querySelector("#subtract").addEventListener("click", subtraction);
+document.querySelector("#calculate").addEventListener("click", result);
+document.querySelector("#add").addEventListener("click", addition);
+document.querySelector("#subtract").addEventListener("click", subtraction);
+document.querySelector("#multiply").addEventListener("click", multiplication);
+document.querySelector("#divide").addEventListener("click", division);
 
 //display it here
 const output = document.querySelector("#operand");
@@ -35,6 +35,39 @@ function getNumber() {
   displayNum += this.innerText;
   output.innerText = displayNum;
 }
+
+// need to figure out how to get the second number!!!
+function saveNum() {
+  if (operation != 0) {
+    num2 = parseFloat(displayNum);
+  } else {
+    num1 = parseFloat(displayNum);
+  }
+  displayNum = "";
+  output.innerText = displayNum;
+}
+
+// caulculate functions - use switch statement to pick operation
+function addition() {
+  saveNum();
+  operation = 1;
+}
+
+function subtraction() {
+  saveNum();
+  operation = 2;
+}
+
+function multiplication() {
+  saveNum();
+  operation = 3;
+}
+
+function division() {
+  saveNum();
+  operation = 4;
+}
+
 // function getOperator() {
 //   console.log("operator Key!");
 // }
