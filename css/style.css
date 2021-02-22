@@ -5,20 +5,6 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/* Clear fix hack */
-/* .clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.clear {
-  clear: both;
-} */
-
 /******************************************
 /* BASE STYLES
 /*******************************************/
@@ -72,7 +58,7 @@ body {
   display: grid;
   justify-content: center;
   align-content: center;
-  min-height: 90vh;
+  /* min-height: 90vh; */
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(6, 100px);
 }

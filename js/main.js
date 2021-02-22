@@ -1,13 +1,6 @@
-/*Five things can happen when a person gets hold of a calculator. They can hit:
-a number key (0–9)
-an operator key (+, -, ×, ÷)
-the decimal key
-the equals key
-the clear key */
-
 //call the smurfs to listen to the key presses
 
-document.querySelector("#calculate").addEventListener("click", result);
+document.querySelector("#calculate").addEventListener("click", operationResult);
 document.querySelector("#add").addEventListener("click", addition);
 document.querySelector("#subtract").addEventListener("click", subtraction);
 document.querySelector("#multiply").addEventListener("click", multiplication);
@@ -51,50 +44,47 @@ function saveNum() {
 function addition() {
   saveNum();
   operation = 1;
+  output.innerText = `${num1} +`;
 }
 
 function subtraction() {
   saveNum();
   operation = 2;
+  output.innerText = `${num1} -`;
 }
 
 function multiplication() {
   saveNum();
   operation = 3;
+  output.innerText = `${num1} *`;
 }
 
 function division() {
   saveNum();
   operation = 4;
+  output.innerText = `${num1} /`;
 }
 
-// function getOperator() {
-//   console.log("operator Key!");
-// }
-// function getResult() {
-//   console.log("equal key");
-// }
-
-// const operator = document.querySelectorAll(".key-operator");
-// for (const key of operator) {
-//   key.addEventListener("click", getOperator);
-// }
-// operator.addEventListener("click", getOperator);
-
-// const result = document.getElementById("calculate");
-// result.addEventListener("click", getResult);
-
-// const numbersArr = [];
-
-// function getNumber() {
-//   console.log("number Key!");
-// }
-// function getOperator() {
-//   console.log("operator Key!");
-// }
-// function getResult() {
-//   console.log("equal key");
-// }
-
-// make an object called calculator
-//
+function operationResult() {
+  saveNum();
+  switch (operation) {
+    case 1:
+      result = num1 + num2;
+      output.innerText = result;
+      break;
+    case 2:
+      result = num1 - num2;
+      output.innerText = result;
+      break;
+    case 3:
+      result = num1 * num2;
+      output.innerText = result;
+      break;
+    case 4:
+      result = num1 / num2;
+      output.innerText = result;
+      break;
+    default:
+      console.log("did not work!");
+  }
+}
