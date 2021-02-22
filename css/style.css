@@ -29,7 +29,7 @@ body {
   background-color: rgb(218, 243, 245);
 }
 
-.calculator-grid > button {
+.calculator-keys > button {
   font-size: 3rem;
   border: 1px solid black;
   background-color: rgb(243, 240, 235);
@@ -37,7 +37,7 @@ body {
 }
 
 .output {
-  margin-bottom: 5px;
+  margin-top: 30%;
   /* so the output box fills the entire space */
   grid-column: 1 / -1;
   background-color: white;
@@ -62,13 +62,21 @@ body {
   justify-content: center;
   align-content: center;
   min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(5, 100px);
+  /* grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px); */
 }
 
+.calculator-keys {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 90vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(6, 100px);
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-.calculator-grid > button:hover {
+.calculator-keys > button:hover {
   background-color: rgb(124, 135, 136);
 }
